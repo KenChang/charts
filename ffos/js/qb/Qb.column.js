@@ -90,9 +90,9 @@ Qb.column.compile = function(resultColumn, sourceColumns, edges, useMVEL){  //us
 			"	return output;\n" +
 			"}catch(e){\n" +
 			"	Log.error("+
-					"\"Problem with definition of name=\\\"" + resultColumn.name +
+					"\"Problem with definition of {name=\\\"" + resultColumn.name +
 					"\\\" value=" + CNV.String2Quote(CNV.String2Quote(resultColumn.value)).leftBut(1).rightBut(1) +
-					" when operating on __source=\"+CNV.Object2JSON(__source)+\" and __result=\"+CNV.Object2JSON(__result)"+
+					"} when operating on __source=\"+CNV.Object2JSON(__source)+\" and __result=\"+CNV.Object2JSON(__result)"+
 					"+\" Are you trying to get an attribute value from a NULL part?\"" +
 				", e)"+
 			"}}";
